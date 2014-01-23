@@ -15,19 +15,11 @@ class continuent_oracle::packages {
     ensure => installed
   }
 
-  package {'elfutils-libelf-devel':
-    ensure => installed
-  }
-
   package {'glibc':
     ensure => installed
   }
 
   package {'glibc-common':
-    ensure => installed
-  }
-
-  package {'glibc-devel':
     ensure => installed
   }
 
@@ -43,22 +35,6 @@ class continuent_oracle::packages {
     ensure => installed
   }
 
-  package {'libaio-devel':
-    ensure => installed
-  }
-
-  package {'libgcc':
-    ensure => installed
-  }
-
-  package {'libstdc++':
-    ensure => installed
-  }
-
-  package {'libstdc++-devel':
-    ensure => installed
-  }
-
   package {'make':
     ensure => installed
   }
@@ -68,10 +44,6 @@ class continuent_oracle::packages {
   }
 
   package {'unixODBC':
-    ensure => installed
-  }
-
-  package {'unixODBC-devel':
     ensure => installed
   }
 
