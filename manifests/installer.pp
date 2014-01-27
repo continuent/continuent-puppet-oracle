@@ -26,7 +26,7 @@ class continuent_oracle::installer {
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-    source => 'puppet:///modules/continuent_oracle/db_install.rsp',
+    content => template('continuent_oracle/db_install.rsp'),
   } ->
   
   exec {'install_oracle':
