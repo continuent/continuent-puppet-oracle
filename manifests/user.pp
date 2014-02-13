@@ -1,7 +1,7 @@
-class continuent_oracle::user {
-  include continuent_oracle::packages
+class oracle::user {
+  include oracle::packages
   
-	Class['continuent_oracle::packages'] ->
+	Class['oracle::packages'] ->
 	
   group {'dba':
     ensure =>  present
@@ -24,7 +24,7 @@ class continuent_oracle::user {
     owner => 'root',
     group => 'root',
     mode => '0644',
-    source => 'puppet:///modules/continuent_oracle/profile'
+    source => 'puppet:///modules/oracle/profile'
   } ->
 
   user {'oracle':

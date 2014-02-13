@@ -1,20 +1,20 @@
-class continuent_oracle::root_config {
-  include continuent_oracle::params
-  include continuent_oracle::user
+class oracle::root_config {
+  include oracle::params
+  include oracle::user
   
   file { '/etc/security/limits.d/10oracle.conf':
     owner => 'root',
     group => 'root',
     mode => '0600',
-    source => 'puppet:///modules/continuent_oracle/limits.conf'
+    source => 'puppet:///modules/oracle/limits.conf'
   }
   
   file { '/etc/oraInst.loc':
     owner => 'oracle',
     group => 'oinstall',
     mode => '0660',
-    source => 'puppet:///modules/continuent_oracle/oraInst.loc',
-    require => Class['continuent_oracle::user']
+    source => 'puppet:///modules/oracle/oraInst.loc',
+    require => Class['oracle::user']
   }
 
 	sysctl { 'kernel.sem':

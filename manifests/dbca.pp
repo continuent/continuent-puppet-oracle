@@ -1,15 +1,15 @@
-class continuent_oracle::dbca {
-  include continuent_oracle::listener
+class oracle::dbca {
+  include oracle::listener
   
   Exec { path => ['/usr/local/sbin', '/usr/sbin', '/sbin', '/usr/local/bin', '/usr/bin', '/bin', '/app/oracle/local/product/11.2.0.1.0/db_in_box/bin'] }
   
-	Class['continuent_oracle::listener'] ->
+	Class['oracle::listener'] ->
 	
   file {'/app/oracle/install/dbca.rsp':
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-    source => 'puppet:///modules/continuent_oracle/dbca.rsp',
+    source => 'puppet:///modules/oracle/dbca.rsp',
   } ->
   
   exec {'create_database':
@@ -26,14 +26,14 @@ class continuent_oracle::dbca {
     owner => 'oracle',
     group => 'oinstall',
     mode => 0664,
-    source => 'puppet:///modules/continuent_oracle/oratab',
+    source => 'puppet:///modules/oracle/oratab',
   } ->
   
   file {'/etc/rc.d/init.d/oracle':
     owner => 'root',
     group => 'root',
     mode => 0755,
-    source => 'puppet:///modules/continuent_oracle/init.oracle',
+    source => 'puppet:///modules/oracle/init.oracle',
   } ->
   
   exec {'register_oracle_startup_script':

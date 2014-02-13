@@ -1,2 +1,2 @@
-class continuent_oracle::params {
+class oracle::params {
 }

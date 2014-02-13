@@ -1,4 +1,4 @@
-class continuent_oracle::packages {
+class oracle::packages {
   package {'binutils':
     ensure => installed
   }

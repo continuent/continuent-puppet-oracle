@@ -1,15 +1,15 @@
-class continuent_oracle::listener {
-  include continuent_oracle::installer
+class oracle::listener {
+  include oracle::installer
   
   Exec { path => ['/usr/local/sbin', '/usr/sbin', '/sbin', '/usr/local/bin', '/usr/bin', '/bin', '/app/oracle/local/product/11.2.0.1.0/db_in_box/bin'] }
   
-	Class['continuent_oracle::installer'] ->
+	Class['oracle::installer'] ->
 
   file {'/app/oracle/install/netca.rsp':
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-    source => 'puppet:///modules/continuent_oracle/netca.rsp',
+    source => 'puppet:///modules/oracle/netca.rsp',
   } ->
 	
   exec {'install_listener':

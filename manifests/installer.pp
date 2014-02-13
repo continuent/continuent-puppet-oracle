@@ -1,10 +1,10 @@
-class continuent_oracle::installer {
-  include continuent_oracle::params
-  include continuent_oracle::root_config
+class oracle::installer {
+  include oracle::params
+  include oracle::root_config
   
   Exec { path => ['/usr/local/sbin', '/usr/sbin', '/sbin', '/usr/local/bin', '/usr/bin', '/bin'] }
 	
-	Class['continuent_oracle::root_config'] ->
+	Class['oracle::root_config'] ->
 	
   file {'/app/oracle/install':
     owner => 'oracle',
@@ -26,7 +26,7 @@ class continuent_oracle::installer {
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-    content => template('continuent_oracle/db_install.rsp'),
+    content => template('oracle/db_install.rsp'),
   } ->
   
   exec {'install_oracle':
