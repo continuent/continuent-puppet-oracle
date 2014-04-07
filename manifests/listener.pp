@@ -19,5 +19,6 @@ class oracle::listener {
     group => 'oinstall',
     creates => '/app/oracle/local/product/11.2.0.1.0/db_in_box/network/admin/listener.ora',
     provider => 'shell',
+    timeout => 0,
   }
 }

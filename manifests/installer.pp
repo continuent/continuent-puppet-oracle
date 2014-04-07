@@ -36,6 +36,7 @@ class oracle::installer {
     group => 'oinstall',
     creates => '/app/oracle/local/product/11.2.0.1.0/db_in_box/root.sh',
     provider => 'shell',
+    timeout => 0,
   } ->
   
   exec {'post_install_root':
