@@ -13,9 +13,8 @@ class oracle::listener {
   } ->
 	
   exec {'install_listener':
-    command => '/app/oracle/local/product/11.2.0.1.0/db_in_box/bin/netca /silent /responsefile /app/oracle/install/netca.rsp',
+    command => 'sudo -u oracle -i /app/oracle/local/product/11.2.0.1.0/db_in_box/bin/netca /silent /responsefile /app/oracle/install/netca.rsp',
     cwd => '/app/oracle/install',
-    user => 'oracle',
     group => 'oinstall',
     creates => '/app/oracle/local/product/11.2.0.1.0/db_in_box/network/admin/listener.ora',
     provider => 'shell',
