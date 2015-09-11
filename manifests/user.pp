@@ -1,37 +1,36 @@
 class oracle::user {
   include oracle::packages
-  
+
 	Class['oracle::packages'] ->
-	
+
   group {'dba':
     ensure =>  present
   } ->
-  
+
 	group {'oinstall':
     ensure => present
   } ->
-  
+
 	file {'/app':
     ensure => directory,
   } ->
-
   file {'/app/oracle':
     ensure => directory,
-    mode => 0775,
   } ->
 
-  file {'/etc/profile.d/oracle.sh':
-    owner => 'root',
-    group => 'root',
-    mode => '0644',
-    source => 'puppet:///modules/oracle/profile'
-  } ->
 
   user {'oracle':
     password => sha1('password'),
     gid => 'oinstall',
-    groups => 'dba',
-    home => '/app/oracle',
+	  managehome => true,
+    groups => ['dba','sudonopw'],
+    home => '/home/oracle',
+  } ->
+  file {'/home/oracle/.bash_profile':
+    owner => 'oracle',
+    group => 'dba',
+    mode => '0644',
+    content => template('oracle/profile.erb')
   } ->
 
 	file {'/app/oracle/data':
@@ -47,4 +46,5 @@ class oracle::user {
     group => 'oinstall',
     mode => 0775,
   }
+
 }
