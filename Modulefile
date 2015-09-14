@@ -1,5 +1,5 @@
 name 'continuent-oracle'
-version '0.0.1'
+version '0.0.2'
 source 'git://github.com/continuent/continuent-oracle.git'
 author 'Continuent'
 license 'Apache 2.0'

@@ -24,7 +24,7 @@ ORACLE_HOSTNAME=<%= scope.lookupvar('::fqdn') %>
 UNIX_GROUP_NAME=oinstall
 INVENTORY_LOCATION=/app/oracle/local/inventory
 SELECTED_LANGUAGES=en,en_GB
-ORACLE_HOME=/app/oracle/local/product/11.2.0.1.0/db_in_box
+ORACLE_HOME=/app/oracle/local/product/11/db_1
 ORACLE_BASE=/app/oracle/local
 
 oracle.install.db.InstallEdition=EE

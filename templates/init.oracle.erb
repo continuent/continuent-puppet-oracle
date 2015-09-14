@@ -10,7 +10,7 @@
 . /etc/rc.d/init.d/functions
 
 LOCKFILE=/var/lock/subsys/oracle
-ORACLE_HOME=/app/oracle/local/product/11.2.0.1.0/db_in_box
+ORACLE_HOME=/app/oracle/local/product/<%= scope.lookupvar('oracle::oracleVersion') %>/db_1
 ORACLE_USER=oracle
 
 case "$1" in
