@@ -23,7 +23,7 @@ class oracle::user {
     password => sha1('password'),
     gid => 'oinstall',
 	  managehome => true,
-    groups => ['dba','sudonopw'],
+    groups => ['dba'],
     home => '/home/oracle',
   } ->
   file {'/home/oracle/.bash_profile':
