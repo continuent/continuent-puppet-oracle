@@ -1,0 +1,21 @@
+{
+  "name": "continuent/oracle",
+  "version": "0.0.2",
+  "author": "Continuent",
+  "summary": "Module for installing Oracle",
+  "license": "Apache-2.0",
+  "source": "https://github.com/continuent/continuent-puppet-oracle",
+  "project_page": "https://github.com/continuent/continuent-puppet-oracle",
+  "issues_url": "https://github.com/continuent/continuent-puppet-oracle/issues",
+  "description": "Install Oracle",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 3.2.0"},
+    {"name":"fiddyspence/sysctl","version_requirement":">= 0.3.1"}
+  ],
+  "operatingsystem_support": [
+    {
+    "operatingsystem":"RedHat",
+    "operatingsystemrelease":[  "6.0","7.0" ]
+    }
+   ]
+}
