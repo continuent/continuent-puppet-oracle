@@ -1,6 +1,6 @@
 {
   "name": "continuent/oracle",
-  "version": "0.0.2",
+  "version": "1.2.0",
   "author": "Continuent",
   "summary": "Module for installing Oracle",
   "license": "Apache-2.0",
