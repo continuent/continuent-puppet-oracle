@@ -290,27 +290,27 @@ oracle.install.db.config.starterdb.installExampleSchemas=false
 # This variable holds the password that is to be used for all schemas in the
 # starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.ALL=password
+oracle.install.db.config.starterdb.password.ALL=<%= scope.lookupvar('oracle::oracleAllPassword') %>
 
 #-------------------------------------------------------------------------------
 # Specify the SYS password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYS=password
+oracle.install.db.config.starterdb.password.SYS=<%= scope.lookupvar('oracle::oracleSysPassword') %>
 
 #-------------------------------------------------------------------------------
 # Specify the SYSTEM password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYSTEM=password
+oracle.install.db.config.starterdb.password.SYSTEM=<%= scope.lookupvar('oracle::oracleSystemPassword') %>
 
 #-------------------------------------------------------------------------------
 # Specify the DBSNMP password for the starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.DBSNMP=password
+oracle.install.db.config.starterdb.password.DBSNMP=<%= scope.lookupvar('oracle::oracleDBSNMPPassword') %>
 
 #-------------------------------------------------------------------------------
 # Specify the PDBADMIN password required for creation of Pluggable Database in the Container Database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.PDBADMIN=password
+oracle.install.db.config.starterdb.password.PDBADMIN=<%= scope.lookupvar('oracle::oraclePdbPassword') %>
 
 #-------------------------------------------------------------------------------
 # Specify the management option to use for managing the database.
