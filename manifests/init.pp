@@ -1,4 +1,12 @@
-class oracle ( $installFiles = '/vagrant/downloads',$oracleVersion='11')
+class oracle ( $installFiles = '/vagrant/downloads',
+               $oracleVersion='11',
+               $oracleSysPassword='password',
+               $oracleSystemPassword='password',
+               $oracleSysManPassword='password',
+               $oracleAllPassword='password',
+               $oracleDBSNMPPassword='password',
+               $oraclePdbPassword='password'
+              )
 {
 
   $versionSupported=['11','12']

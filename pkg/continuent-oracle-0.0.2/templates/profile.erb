@@ -1,0 +1,14 @@
+# .profile
+# File Managed by Puppet
+
+umask 022
+export ORACLE_BASE=/app/oracle/local
+export ORACLE_HOME=/app/oracle/local/product/<%= scope.lookupvar('oracle::oracleVersion') %>/db_1
+export PATH=$PATH:$ORACLE_HOME/bin
+export ORACLE_SID=ORCL
+
+export LC_ALL=en_GB.UTF-8
+export LANG=en_GB.UTF-8
+export LANGUAGE=en_GB.UTF-8
+export PS1='{\u@\h \W}\$ '
+export PATH=$HOME/bin:$PATH

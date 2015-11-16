@@ -53,11 +53,11 @@ oracle.install.db.config.starterdb.enableSecuritySettings=true
 # This variable holds the password that is to be used for all schemas in the
 # starter database.
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.ALL=<%= scope.lookupvar('oracle::oracleAllPassword') %>
-oracle.install.db.config.starterdb.password.SYS=<%= scope.lookupvar('oracle::oracleSysPassword') %>
-oracle.install.db.config.starterdb.password.SYSTEM=<%= scope.lookupvar('oracle::oracleSystemPassword') %>
-oracle.install.db.config.starterdb.password.SYSMAN=<%= scope.lookupvar('oracle::oracleSysManPassword') %>
-oracle.install.db.config.starterdb.password.DBSNMP=<%= scope.lookupvar('oracle::oracleDBSNMPPassword') %>
+oracle.install.db.config.starterdb.password.ALL=password
+oracle.install.db.config.starterdb.password.SYS=password
+oracle.install.db.config.starterdb.password.SYSTEM=password
+oracle.install.db.config.starterdb.password.SYSMAN=password
+oracle.install.db.config.starterdb.password.DBSNMP=password
 
 oracle.install.db.config.starterdb.control=DB_CONTROL
 oracle.install.db.config.starterdb.gridcontrol.gridControlServiceURL=

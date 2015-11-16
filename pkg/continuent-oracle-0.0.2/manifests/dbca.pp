@@ -9,7 +9,7 @@ class oracle::dbca {
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-        content => template("oracle/$oracle::oracleVersion/dbca.rsp"),
+    source => "puppet:///modules/oracle/$oracle::oracleVersion/dbca.rsp",
   } ->
 
   exec {'create_database':

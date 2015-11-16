@@ -9,7 +9,7 @@ class oracle::listener {
     owner => 'oracle',
     group => 'oinstall',
     mode => 0640,
-        content => template("oracle/$oracle::oracleVersion/netca.rsp"),
+    source => "puppet:///modules/oracle/$oracle::oracleVersion/netca.rsp",
   } ->
 
   exec {'install_listener':
